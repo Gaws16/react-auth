@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import Register from "./LoginRegisterForm   ";
+import Register from "./LoginRegisterForm";
 export default function Account() {
   return (
     <Row>

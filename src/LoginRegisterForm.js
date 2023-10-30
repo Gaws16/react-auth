@@ -12,7 +12,7 @@ export default function LoginRegisterForm({ title }) {
 
   let responseText = "";
   let endPoint = "";
-  let location = "";
+
   if (title === "Register") {
     responseText = "Registered";
     endPoint = "register";
