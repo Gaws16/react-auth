@@ -12,13 +12,15 @@ export default function LoginRegisterForm({ title }) {
 
   let responseText = "";
   let endPoint = "";
-
+  let location = "";
   if (title === "Register") {
     responseText = "Registered";
     endPoint = "register";
+    location = "/";
   } else {
     responseText = "Logged in";
     endPoint = "login";
+    location = "/auth";
   }
 
   function handleSubmit(e) {
@@ -38,7 +40,7 @@ export default function LoginRegisterForm({ title }) {
         cookies.set("TOKEN", result.data.token, {
           path: "/",
         });
-        window.location.href = "/auth";
+        window.location.href = location;
       })
       .catch((err) => console.log(err));
   }
